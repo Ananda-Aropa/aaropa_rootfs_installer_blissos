@@ -1,5 +1,0 @@
-APT::Install-Recommends "0";
-APT::Install-Suggests "0";
-APT::AllowUnauthenticated "true";
-Acquire::AllowInsecureRepositories "true";
-Acquire::AllowDowngradeToInsecureRepositories "true";
