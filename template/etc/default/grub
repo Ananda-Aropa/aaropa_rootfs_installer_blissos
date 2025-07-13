@@ -1,2 +1,4 @@
-GRUB_THEME=$(ls -d /tmp/calamares-root-*)/boot/grub/themes/vimix-white-1080p/theme.txt
-GRUB_BACKGROUND=$(ls -d /tmp/calamares-root-*)/boot/grub/themes/vimix-white-1080p/background.png
+_GRUB_THEMES_DIR=$(find /tmp -mindepth 1 -maxdepth 1 -type d -iname "calamares-root-*" -print -quit || :)/boot/grub/themes
+
+GRUB_THEME=$(find "$_GRUB_THEMES_DIR" -mindepth 1 -maxdepth 2 -type f -name "theme.txt" -print -quit || :)
+GRUB_BACKGROUND=$(find "$_GRUB_THEMES_DIR" -mindepth 1 -maxdepth 2 -type f -name "background.png" -print -quit || :)
