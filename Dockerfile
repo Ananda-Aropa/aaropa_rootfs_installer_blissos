@@ -5,10 +5,10 @@ COPY packages /
 COPY scripts /
 COPY iso /iso
 
-RUN apt update && apt upgrade -y
+RUN apt update && apt upgrade -y --allow-unauthenticated
 
 # Install package list
-RUN grep -Ev '^#' /pkglist.cfg | xargs apt install -y --no-install-recommends --no-install-suggests
+RUN grep -Ev '^#' /pkglist.cfg | xargs apt install -y --no-install-recommends --no-install-suggests --allow-unauthenticated
 
 RUN /post-install.sh
 
