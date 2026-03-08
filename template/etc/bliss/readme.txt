@@ -9,7 +9,7 @@ Welcome to the new BlissOS installation environment! This environment is built o
 - QTerminal – Terminal emulator
 - JWM – Window manager
 
-The installation process is powered by the Calamares installer. Before you begin, we recommend reviewing the tutorial in our documentation at https://docs.blissos.org.
+The installation process is powered by Calamares installer. Before you begin, we recommend reviewing the tutorial in our documentation at https://docs.blissos.org, or open HOW_TO_USE.png on the desktop screen and scan the provided QR code to open the documentation on your phone.
 
 With appreciation,
 BlissLabs & Contributors
