@@ -1,5 +1,7 @@
 #!/bin/bash
 
+cd /
+
 mkdir -p \
   android \
   boot/grub \
