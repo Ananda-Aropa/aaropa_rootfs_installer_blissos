@@ -1,14 +1,14 @@
 #!/bin/bash
 
-for d in \
+mkdir -p \
   android \
   boot/grub \
   boot/efi \
   cdrom \
   root \
-  source; do
-  mkdir -p $d
-done
+  source \
+  vendor \
+  data
 
 # setup autologin
 sed -i 's@1:2345:respawn:/sbin/getty@1:2345:respawn:/sbin/getty -n -l /usr/sbin/autologin@g' /etc/inittab
@@ -25,6 +25,7 @@ busybox --install -s /bin
 
 # Additional setup
 ln -s pcmanfm-qt /usr/bin/pcmanfm
+ln -s sbin/init /init
 
 # Enable dbus and udev services
 update-rc.d dbus defaults
